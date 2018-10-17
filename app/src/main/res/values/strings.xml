@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MyDndApp</string>
+    <string name="login_text">Login</string>
+    <string name="username_hint">Enter username</string>
+    <string name="password_hint">Enter password</string>
+    <string name="create_account_button">Create Account</string>
+    <string name="submit_button">Submit</string>
 </resources>
