@@ -7,4 +7,26 @@
     <string name="submit_button">Submit</string>
     <string name="create_character_button">Create Character</string>
     <string name="view_characters">View Characters</string>
+    <string name="add_character">Add Character</string>
+    <string name="add_existing_char_info">Add an existing DnD character here</string>
+    <string name="character_name">Character Name</string>
+    <string name="class_name">Class</string>
+    <string name="level">Level</string>
+    <string name="barbarian">Barbarian</string>
+    <string-array name="classes_array">
+        <item>Barbarian</item>
+        <item>Bard</item>
+        <item>Cleric</item>
+        <item>Druid</item>
+        <item>Fighter</item>
+        <item>Monk</item>
+        <item>Paladin</item>
+        <item>Ranger</item>
+        <item>Rogue</item>
+        <item>Sorcerer</item>
+        <item>Warlock</item>
+        <item>Wizard</item>
+    </string-array>
+
+
 </resources>

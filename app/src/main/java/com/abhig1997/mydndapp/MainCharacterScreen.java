@@ -22,7 +22,7 @@ public class MainCharacterScreen extends AppCompatActivity {
      * Called when the user taps the Create Character button
      * @param view
      */
-    public void createCharacter(View view) {
+    public void addCharacter(View view) {
         Intent intent = new Intent(this, CreateCharacterScreen.class);
         startActivity(intent);
     }
