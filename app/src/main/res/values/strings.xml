@@ -43,6 +43,9 @@
     <string name="alignment">Alignment</string>
     <string name="experience_points">Experience Points</string>
     <string name="goto_ability_scores_button_id">Enter Ability Scores</string>
+    <string name="ability_scores_screen_name">Enter Your Ability Scores</string>
+    <string name="ability_scores_info_message">These should be FINAL ability scores.</string>
+    <string name="strength_score_hint">Strength Score</string>
 
 
 </resources>

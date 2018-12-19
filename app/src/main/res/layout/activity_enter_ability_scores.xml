@@ -6,4 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".EnterAbilityScores">
 
+    <TextView
+        android:id="@+id/ability_score_info_msg"
+        android:layout_width="112dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/ability_scores_screen_name"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/ability_scores_info_message"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ability_score_info_msg" />
+
+    <EditText
+        android:id="@+id/strength_score_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/strength_score_hint"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
 </android.support.constraint.ConstraintLayout>
