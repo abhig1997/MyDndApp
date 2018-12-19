@@ -79,8 +79,34 @@ public class CreateCharacterScreen extends AppCompatActivity {
         String className = classSpinner.getSelectedItem().toString();
         extras.putString("CLASS_NAME", className);
 
-        
+        // add the level number
+        EditText levelNumberBox = (EditText) findViewById(R.id.level_input);
+        int levelNum = Integer.parseInt(levelNumberBox.getText().toString());
+        extras.putInt("LEVEL_NUM", levelNum);
 
+        // add the background information string
+        EditText backgroundBox = (EditText) findViewById(R.id.background_input);
+        String background = backgroundBox.getText().toString();
+        extras.putString("BACKGROUND", background);
+
+        // add the race input
+        EditText raceBox = (EditText) findViewById(R.id.background_input);
+        String raceInput = raceBox.getText().toString();
+        extras.putString("RACE", raceInput);
+
+        // add the alignment
+        Spinner alignmentSpinner = (Spinner) findViewById(R.id.alignment_spinner);
+        String alignmentString = alignmentSpinner.getSelectedItem().toString();
+        extras.putString("ALIGNMENT", alignmentString);
+
+        // add the experience points
+        EditText experienceBox = (EditText) findViewById(R.id.exp_input);
+        int experienceAmt = Integer.parseInt(experienceBox.getText().toString());
+        extras.putInt("EXPERIENCE_AMOUNT", experienceAmt);
+
+        intent.putExtras(extras); // attach the extras to the ability scores screen
+
+        startActivity(intent);
     }
 
 }
