@@ -46,6 +46,11 @@
     <string name="ability_scores_screen_name">Enter Your Ability Scores</string>
     <string name="ability_scores_info_message">These should be FINAL ability scores.</string>
     <string name="strength_score_hint">Strength Score</string>
+    <string name="dex_score_hint">Dexterity Score</string>
+    <string name="constitution_hint">Constitution Score</string>
+    <string name="intelligence_hint">Intelligence Score</string>
+    <string name="wisdom_hint">Wisdom Score</string>
+    <string name="charisma_hint">Charisma Score</string>
 
 
 </resources>
