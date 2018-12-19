@@ -74,6 +74,13 @@ public class CreateCharacterScreen extends AppCompatActivity {
         String characterName = characterNameBox.getText().toString();
         extras.putString("CHARACTER_NAME", characterName);
 
+        // get the class name that they selected
+        Spinner classSpinner = (Spinner) findViewById(R.id.class_spinner);
+        String className = classSpinner.getSelectedItem().toString();
+        extras.putString("CLASS_NAME", className);
+
+        
+
     }
 
 }
