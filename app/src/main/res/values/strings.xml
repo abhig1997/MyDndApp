@@ -42,6 +42,7 @@
     </string-array>
     <string name="alignment">Alignment</string>
     <string name="experience_points">Experience Points</string>
+    <string name="goto_ability_scores_button_id">Enter Ability Scores</string>
 
 
 </resources>
