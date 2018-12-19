@@ -1,8 +1,11 @@
 package com.abhig1997.mydndapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 
 public class CreateCharacterScreen extends AppCompatActivity {
@@ -52,5 +55,25 @@ public class CreateCharacterScreen extends AppCompatActivity {
         spinner.setAdapter(adapter);
     }
 
+
+    /**
+     *
+     * @param view
+     */
+    public void enterAbilityScores(View view) {
+        // create the intent for the ability scores class
+        Intent intent = new Intent(this, EnterAbilityScores.class);
+
+        // add the extras to the intent
+        Bundle extras = new Bundle();
+
+        // add all the necessary key value pairs
+
+        // add the character name
+        EditText characterNameBox = (EditText) findViewById(R.id.char_name_input);
+        String characterName = characterNameBox.getText().toString();
+        extras.putString("CHARACTER_NAME", characterName);
+
+    }
 
 }
