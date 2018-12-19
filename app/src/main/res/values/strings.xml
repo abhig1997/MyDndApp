@@ -51,6 +51,14 @@
     <string name="intelligence_hint">Intelligence Score</string>
     <string name="wisdom_hint">Wisdom Score</string>
     <string name="charisma_hint">Charisma Score</string>
+    <string name="goto_skill_score_button_text">Enter Skill Scores</string>
+    <string name="skill_scores_title">Enter Your Skill Scores</string>
+    <string name="acrobatics_hint">Acrobatics Bonus</string>
+    <string name="animal_hint">Animal Handling</string>
+    <string name="arcana_hint">Arcana Bonus</string>
+    <string name="athletics_hint">Athletics Bonus</string>
+    <string name="deception_bonus">Deception Bonus</string>
+    <string name="history_hint">History Bonus</string>
 
 
 </resources>

@@ -21,7 +21,8 @@
         <activity android:name=".CreateAccount" />
         <activity android:name=".MainActivity" />
         <activity android:name=".CreateCharacterScreen" />
-        <activity android:name=".EnterAbilityScores"></activity>
+        <activity android:name=".EnterAbilityScores" />
+        <activity android:name=".EnterSkillScores"></activity>
     </application>
 
 </manifest>
