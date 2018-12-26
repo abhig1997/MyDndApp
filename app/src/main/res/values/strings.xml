@@ -61,6 +61,16 @@
     <string name="history_hint">History Bonus</string>
     <string name="insight_hint">Insight Bonus</string>
     <string name="intim_hint">Intimidation Bonus</string>
+    <string name="invest_hint">Investigation Bonus</string>
+    <string name="med_hint">Medicine Bonus</string>
+    <string name="nature_hint">Nature Bonus</string>
+    <string name="perception_hint">Perception Bonus</string>
+    <string name="perform_hint">Performance Bonus</string>
+    <string name="persuasion_hint">Persuasion Bonus</string>
+    <string name="religion_hint">Religion Bonus</string>
+    <string name="sleight_hint">Sleight of Hand Bonus</string>
+    <string name="stealth_hint">Stealth Bonus</string>
+    <string name="survival_hint">Survival Bonus</string>
 
 
 </resources>
