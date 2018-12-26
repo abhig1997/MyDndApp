@@ -45,6 +45,58 @@ public class EnterSkillScores extends AppCompatActivity {
         updatedExtras.putInt("ATHLETICS_SCORE", athletics_score);
 
         // add deception score
-        
+        EditText deception_box = (EditText) findViewById(R.id.deception_box);
+        int deception_score = Integer.parseInt(deception_box.getText().toString());
+        updatedExtras.putInt("DECEPTION_SCORE", deception_score);
+
+        // add history score
+        EditText history_box = (EditText) findViewById(R.id.history_box);
+        int history_score = Integer.parseInt(history_box.getText().toString());
+        updatedExtras.putInt("HISTORY_SCORE", history_score);
+
+        // add insight score
+        EditText insight_box = (EditText) findViewById(R.id.insight_box);
+        int insight_score = Integer.parseInt(insight_box.getText().toString());
+        updatedExtras.putInt("INSIGHT_SCORE", insight_score);
+
+        // add intimidation score
+        EditText intim_box = (EditText) findViewById(R.id.intim_box);
+        int intim_score = Integer.parseInt(intim_box.getText().toString());
+        updatedExtras.putInt("INTIM_SCORE", intim_score);
+
+        // add investigation score
+        EditText invest_box = (EditText) findViewById(R.id.invest_box);
+        int invest_score = Integer.parseInt(invest_box.getText().toString());
+        updatedExtras.putInt("INVEST_SCORE", invest_score);
+
+        // add med score
+        EditText med_box = (EditText) findViewById(R.id.med_box);
+        int med_score = Integer.parseInt(med_box.getText().toString());
+        updatedExtras.putInt("MED_SCORE", med_score);
+
+        // add nature score
+        EditText nature_box = (EditText) findViewById(R.id.nature_box);
+        int nature_score = Integer.parseInt(nature_box.getText().toString());
+        updatedExtras.putInt("NATURE_SCORE", nature_score);
+
+        // add perception score
+        EditText perception_box = (EditText) findViewById(R.id.perception_box);
+        int perception_score = Integer.parseInt(perception_box.getText().toString());
+        updatedExtras.putInt("PERCEPTION_SCORE", perception_score);
+
+        // add performance score
+        EditText performance_box = (EditText) findViewById(R.id.perform_box);
+        int performance_score = Integer.parseInt(performance_box.getText().toString());
+        updatedExtras.putInt("PERFORM_SCORE", performance_score);
+
+        // add persuasion score
+        EditText persuasion_box = (EditText) findViewById(R.id.persuasion_box);
+        int persuasion_score = Integer.parseInt(persuasion_box.getText().toString());
+        updatedExtras.putInt("PERSUASION_SCORE", persuasion_score);
+
+        // add religion score
+        EditText religion_box = (EditText) findViewById(R.id.religion_box);
+        int religion_score = Integer.parseInt(religion_box.getText().toString());
+        updatedExtras.putInt("RELIGION_SCORE", religion_score);
     }
 }
