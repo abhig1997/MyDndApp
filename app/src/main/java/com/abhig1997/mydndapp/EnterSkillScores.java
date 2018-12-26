@@ -15,6 +15,7 @@ public class EnterSkillScores extends AppCompatActivity {
         setContentView(R.layout.activity_enter_skill_scores);
     }
 
+    // Handles storing all the inputted information in a bundle and passes it to the next intent
     public void submitSkillScores(View view) {
         Intent intent = new Intent(this, EnterFinalStats.class); // create the intent
                                                                         // to go to the next screen
@@ -98,5 +99,24 @@ public class EnterSkillScores extends AppCompatActivity {
         EditText religion_box = (EditText) findViewById(R.id.religion_box);
         int religion_score = Integer.parseInt(religion_box.getText().toString());
         updatedExtras.putInt("RELIGION_SCORE", religion_score);
+
+        // add sleight score
+        EditText sleight_box = (EditText) findViewById(R.id.sleight_box);
+        int sleight_score = Integer.parseInt(sleight_box.getText().toString());
+        updatedExtras.putInt("SLEIGHT_SCORE", sleight_score);
+
+        // add stealth score
+        EditText stealth_box = (EditText) findViewById(R.id.stealth_box);
+        int stealth_score = Integer.parseInt(stealth_box.getText().toString());
+        updatedExtras.putInt("STEALTH_SCORE", stealth_score);
+
+        // add survival score
+        EditText survival_box = (EditText) findViewById(R.id.survival_box);
+        int survival_score = Integer.parseInt(survival_box.getText().toString());
+        updatedExtras.putInt("SURVIVAL_SCORE", survival_score);
+
+        intent.putExtras(updatedExtras);
+
+        startActivity(intent);
     }
 }
