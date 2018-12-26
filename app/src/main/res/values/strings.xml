@@ -59,6 +59,8 @@
     <string name="athletics_hint">Athletics Bonus</string>
     <string name="deception_bonus">Deception Bonus</string>
     <string name="history_hint">History Bonus</string>
+    <string name="insight_hint">Insight Bonus</string>
+    <string name="intim_hint">Intimidation Bonus</string>
 
 
 </resources>
