@@ -72,6 +72,7 @@
     <string name="stealth_hint">Stealth Bonus</string>
     <string name="survival_hint">Survival Bonus</string>
     <string name="hp_string">Hit Points</string>
+    <string name="ac_string">Armor Class</string>
 
 
 </resources>

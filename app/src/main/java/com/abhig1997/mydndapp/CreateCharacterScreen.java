@@ -94,6 +94,11 @@ public class CreateCharacterScreen extends AppCompatActivity {
         String raceInput = raceBox.getText().toString();
         extras.putString("RACE", raceInput);
 
+        // add hit points input
+        EditText hpBox = (EditText) findViewById(R.id.hp_input);
+        String hpInput = hpBox.getText().toString();
+        extras.putString("HIT_POINTS", hpInput);
+
         // add the alignment
         Spinner alignmentSpinner = (Spinner) findViewById(R.id.alignment_spinner);
         String alignmentString = alignmentSpinner.getSelectedItem().toString();

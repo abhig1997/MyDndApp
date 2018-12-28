@@ -22,9 +22,24 @@ public class EnterFinalStats extends AppCompatActivity {
                                                         // new info
 
         // add the final stats
-        EditText hp_box = (EditText) findViewById(R.id.hp_box);
-        int hp_score = Integer.parseInt(hp_box.getText().toString());
-        updatedExtras.putInt("HIT_POINTS", hp_score);
+        EditText ac_box = (EditText) findViewById(R.id.ac_box);
+        int ac_score = Integer.parseInt(ac_box.getText().toString());
+        updatedExtras.putInt("ARMOR_CLASS", ac_score);
+
+        // add gold amount
+        EditText gold_box = (EditText) findViewById(R.id.goldInput);
+        int gold_amount = Integer.parseInt(gold_box.getText().toString());
+        updatedExtras.putInt("GOLD", gold_amount);
+
+        // add silver amount
+        EditText silver_box = (EditText) findViewById(R.id.silverInput);
+        int silver_amount = Integer.parseInt(silver_box.getText().toString());
+        updatedExtras.putInt("SILVER", silver_amount);
+
+        // add copper amount
+        EditText copper_box = (EditText) findViewById(R.id.copperInput);
+        int copper_amount = Integer.parseInt(copper_box.getText().toString());
+        updatedExtras.putInt("COPPER", copper_amount);
 
 
         intent.putExtras(updatedExtras);
