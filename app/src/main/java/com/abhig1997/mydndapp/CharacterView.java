@@ -2,6 +2,7 @@ package com.abhig1997.mydndapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -35,6 +36,9 @@ public class CharacterView extends AppCompatActivity {
 
         // display the exp points
         showExp();
+
+        // display the hit points
+        showHP();
     }
 
     /**
@@ -67,7 +71,7 @@ public class CharacterView extends AppCompatActivity {
     public void showLevel() {
         TextView levelBox = (TextView) findViewById(R.id.levelDisplay);
         int level = extras.getInt("LEVEL_NUM");
-        String levelstr = "Level " + level;
+        String levelstr = "LVL " + level;
         levelBox.setText(levelstr);
     }
 
@@ -76,6 +80,14 @@ public class CharacterView extends AppCompatActivity {
         int exp = extras.getInt("EXPERIENCE_AMOUNT");
         String expStr = "EXP: " + exp;
         expBox.setText(expStr);
+    }
 
+    /**
+     * Displays the current hit points of the character
+     */
+    public void showHP() {
+        EditText hpBox = (EditText) findViewById(R.id.hpDisplay);
+        int currentHp = extras.getInt("HIT_POINTS");
+        hpBox.setText(Integer.toString(currentHp));
     }
 }

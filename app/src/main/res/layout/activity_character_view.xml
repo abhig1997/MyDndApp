@@ -22,12 +22,13 @@
         android:id="@+id/className"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintEnd_toStartOf="@+id/characterName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -41,9 +42,9 @@
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/characterName"
-        app:layout_constraintStart_toEndOf="@+id/className"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/hpTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/className" />
 
     <TextView
         android:id="@+id/levelDisplay"
@@ -54,7 +55,7 @@
         android:layout_marginEnd="8dp"
         android:textColor="@android:color/black"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/expPointsDisplay"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/characterName"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -62,11 +63,44 @@
         android:id="@+id/expPointsDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/hpTitle"
+        app:layout_constraintTop_toBottomOf="@+id/levelDisplay" />
+
+    <EditText
+        android:id="@+id/hpDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:background="@drawable/back"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hpTitle" />
+
+    <TextView
+        android:id="@+id/hpTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="HP"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/characterName" />
 </android.support.constraint.ConstraintLayout>

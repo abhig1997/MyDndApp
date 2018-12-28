@@ -90,7 +90,7 @@ public class CreateCharacterScreen extends AppCompatActivity {
         extras.putString("BACKGROUND", background);
 
         // add the race input
-        EditText raceBox = (EditText) findViewById(R.id.background_input);
+        EditText raceBox = (EditText) findViewById(R.id.race_input);
         String raceInput = raceBox.getText().toString();
         extras.putString("RACE", raceInput);
 
