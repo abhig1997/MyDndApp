@@ -20,7 +20,10 @@
         </activity>
         <activity android:name=".CreateAccount" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".CreateCharacterScreen"></activity>
+        <activity android:name=".CreateCharacterScreen" />
+        <activity android:name=".EnterAbilityScores" />
+        <activity android:name=".EnterSkillScores" />
+        <activity android:name=".EnterFinalStats"></activity>
     </application>
 
 </manifest>

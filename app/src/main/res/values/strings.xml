@@ -43,6 +43,34 @@
     <string name="alignment">Alignment</string>
     <string name="experience_points">Experience Points</string>
     <string name="goto_ability_scores_button_id">Enter Ability Scores</string>
+    <string name="ability_scores_screen_name">Enter Your Ability Scores</string>
+    <string name="ability_scores_info_message">These should be FINAL ability scores.</string>
+    <string name="strength_score_hint">Strength Score</string>
+    <string name="dex_score_hint">Dexterity Score</string>
+    <string name="constitution_hint">Constitution Score</string>
+    <string name="intelligence_hint">Intelligence Score</string>
+    <string name="wisdom_hint">Wisdom Score</string>
+    <string name="charisma_hint">Charisma Score</string>
+    <string name="goto_skill_score_button_text">Enter Skill Scores</string>
+    <string name="skill_scores_title">Enter Your Skill Scores</string>
+    <string name="acrobatics_hint">Acrobatics Bonus</string>
+    <string name="animal_hint">Animal Handling</string>
+    <string name="arcana_hint">Arcana Bonus</string>
+    <string name="athletics_hint">Athletics Bonus</string>
+    <string name="deception_bonus">Deception Bonus</string>
+    <string name="history_hint">History Bonus</string>
+    <string name="insight_hint">Insight Bonus</string>
+    <string name="intim_hint">Intimidation Bonus</string>
+    <string name="invest_hint">Investigation Bonus</string>
+    <string name="med_hint">Medicine Bonus</string>
+    <string name="nature_hint">Nature Bonus</string>
+    <string name="perception_hint">Perception Bonus</string>
+    <string name="perform_hint">Performance Bonus</string>
+    <string name="persuasion_hint">Persuasion Bonus</string>
+    <string name="religion_hint">Religion Bonus</string>
+    <string name="sleight_hint">Sleight of Hand Bonus</string>
+    <string name="stealth_hint">Stealth Bonus</string>
+    <string name="survival_hint">Survival Bonus</string>
 
 
 </resources>
