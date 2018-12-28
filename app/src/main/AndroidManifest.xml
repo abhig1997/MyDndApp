@@ -23,7 +23,8 @@
         <activity android:name=".CreateCharacterScreen" />
         <activity android:name=".EnterAbilityScores" />
         <activity android:name=".EnterSkillScores" />
-        <activity android:name=".EnterFinalStats"></activity>
+        <activity android:name=".EnterFinalStats" />
+        <activity android:name=".CharacterView"></activity>
     </application>
 
 </manifest>

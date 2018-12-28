@@ -71,6 +71,7 @@
     <string name="sleight_hint">Sleight of Hand Bonus</string>
     <string name="stealth_hint">Stealth Bonus</string>
     <string name="survival_hint">Survival Bonus</string>
+    <string name="hp_string">Hit Points</string>
 
 
 </resources>
