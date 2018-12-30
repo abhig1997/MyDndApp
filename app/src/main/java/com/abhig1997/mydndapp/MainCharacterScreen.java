@@ -32,6 +32,7 @@ public class MainCharacterScreen extends AppCompatActivity {
      * @param view
      */
     public void viewCharacters(View view) {
-
+        Intent intent = new Intent(this, ShowCharacterSaves.class);
+        startActivity(intent);
     }
 }
