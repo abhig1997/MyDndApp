@@ -53,6 +53,9 @@ public class CharacterView extends AppCompatActivity {
         characterName.setText(char_name);
     }
 
+    /**
+     * Show the class of the char
+     */
     public void showClassName() {
         TextView classNameBox = (TextView) findViewById(R.id.className);
 
@@ -62,12 +65,18 @@ public class CharacterView extends AppCompatActivity {
         classNameBox.setText(class_name);
     }
 
+    /**
+     * Display the race of the character
+     */
     public void showRaceName() {
         TextView raceNameBox = (TextView) findViewById(R.id.raceName);
         String race_name = extras.getString("RACE");
         raceNameBox.setText(race_name);
     }
 
+    /**
+     * Display the level of the character
+     */
     public void showLevel() {
         TextView levelBox = (TextView) findViewById(R.id.levelDisplay);
         int level = extras.getInt("LEVEL_NUM");
@@ -75,6 +84,9 @@ public class CharacterView extends AppCompatActivity {
         levelBox.setText(levelstr);
     }
 
+    /**
+     * Displays the current exp amount for the character
+     */
     public void showExp() {
         TextView expBox = (TextView) findViewById(R.id.expPointsDisplay);
         int exp = extras.getInt("EXPERIENCE_AMOUNT");
