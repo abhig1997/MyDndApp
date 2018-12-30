@@ -60,6 +60,9 @@ public class CharacterView extends AppCompatActivity {
         showIntScore();
         showWisScore();
         showCharismaScore();
+
+        // display the armor class
+        showAcScore();
     }
 
     /**
@@ -161,6 +164,12 @@ public class CharacterView extends AppCompatActivity {
         EditText chaBox = (EditText) findViewById(R.id.charismaScoreBox);
         int chaScore = extras.getInt("CHARISMA_SCORE");
         chaBox.setText(Integer.toString(chaScore));
+    }
+
+    public void showAcScore() {
+        EditText acBox = (EditText) findViewById(R.id.armorClassBox);
+        int ac = extras.getInt("ARMOR_CLASS");
+        acBox.setText(Integer.toString(ac));
     }
 
     /**
