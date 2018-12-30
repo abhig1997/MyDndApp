@@ -52,6 +52,14 @@ public class CharacterView extends AppCompatActivity {
 
         // display the hit points
         showHP();
+
+        // display the stats scores
+        showStrengthScore();
+        showDexScore();
+        showConstScore();
+        showIntScore();
+        showWisScore();
+        showCharismaScore();
     }
 
     /**
@@ -117,6 +125,45 @@ public class CharacterView extends AppCompatActivity {
     }
 
     /**
+     * Shows the strength score of the current character
+     */
+    public void showStrengthScore() {
+        EditText strengthBox = (EditText) findViewById(R.id.strengthScoreBox);
+        int strengthScore = extras.getInt("STRENGTH_SCORE");
+        strengthBox.setText(Integer.toString(strengthScore));
+    }
+
+    public void showDexScore() {
+        EditText dexBox = (EditText) findViewById(R.id.dexScoreBox);
+        int dexScore = extras.getInt("DEX_SCORE");
+        dexBox.setText(Integer.toString(dexScore));
+    }
+
+    public void showConstScore() {
+        EditText constBox = (EditText) findViewById(R.id.constScoreBox);
+        int constScore = extras.getInt("CONST_SCORE");
+        constBox.setText(Integer.toString(constScore));
+    }
+
+    public void showIntScore() {
+        EditText intBox = (EditText) findViewById(R.id.intelligenceScoreBox);
+        int intScore = extras.getInt("INTELLIGENCE_SCORE");
+        intBox.setText(Integer.toString(intScore));
+    }
+
+    public void showWisScore() {
+        EditText wisBox = (EditText) findViewById(R.id.wisdomScoreBox);
+        int wisScore = extras.getInt("WISDOM_SCORE");
+        wisBox.setText(Integer.toString(wisScore));
+    }
+
+    public void showCharismaScore() {
+        EditText chaBox = (EditText) findViewById(R.id.charismaScoreBox);
+        int chaScore = extras.getInt("CHARISMA_SCORE");
+        chaBox.setText(Integer.toString(chaScore));
+    }
+
+    /**
      * Saves all the extras associated with the current character
      * @return false if the saving is unsuccessful
      *         true  if the saving is successful
@@ -140,7 +187,7 @@ public class CharacterView extends AppCompatActivity {
             obj.put("level", extras.getInt("LEVEL_NUM"));
             obj.put("background", extras.getString("BACKGROUND"));
             obj.put("race", extras.getString("RACE"));
-            obj.put("hit_points", extras.getString("HIT_POINTS"));
+            obj.put("hit_points", extras.getInt("HIT_POINTS"));
             obj.put("alignment", extras.getString("ALIGNMENT"));
             obj.put("exp", extras.getInt("EXPERIENCE_AMOUNT"));
             obj.put("strength", extras.getInt("STRENGTH_SCORE"));
