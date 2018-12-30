@@ -24,7 +24,8 @@
         <activity android:name=".EnterAbilityScores" />
         <activity android:name=".EnterSkillScores" />
         <activity android:name=".EnterFinalStats" />
-        <activity android:name=".CharacterView"></activity>
+        <activity android:name=".CharacterView" />
+        <activity android:name=".ShowCharacterSaves"></activity>
     </application>
 
 </manifest>
