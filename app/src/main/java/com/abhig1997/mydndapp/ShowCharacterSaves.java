@@ -92,12 +92,36 @@ public class ShowCharacterSaves extends AppCompatActivity {
         try {
             JSONObject obj = new JSONObject(json);
 
+            System.out.println(obj.toString(4));
+
             // need to get all the values from the json file and put them in a bundle
             // then pass that bundle to the CharacterView page
             Bundle extras = new Bundle(); // the bundle to pass to the next activity
 
+            String name = obj.getString("name");
+            extras.putString("CHARACTER_NAME", name);
+
+            String class_name = obj.getString("class");
+            extras.putString("CLASS_NAME", class_name);
+
+            int level_num = obj.getInt("level");
+            extras.putInt("LEVEL_NUM" ,level_num);
+
+            String background = obj.getString("background");
+            extras.putString("BACKGROUND", background);
+
+            String race = obj.getString("race");
+            extras.putString("RACE", race);
+
+            int hp = obj.getInt("hit_points");
+            extras.putInt("HIT_POINTS", hp);
 
 
+            String alignment = obj.getString("alignment");
+            extras.putString("ALIGNMENT", alignment);
+
+            int exp = obj.getInt("exp");
+            extras.putInt("EXPERIENCE_AMOUNT", exp);
         } catch (JSONException e) {
             e.printStackTrace();
         }
