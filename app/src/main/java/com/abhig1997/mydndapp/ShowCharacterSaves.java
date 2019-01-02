@@ -122,6 +122,12 @@ public class ShowCharacterSaves extends AppCompatActivity {
 
             int exp = obj.getInt("exp");
             extras.putInt("EXPERIENCE_AMOUNT", exp);
+
+            int strength_score = obj.getInt("strength");
+            extras.putInt("STRENGTH_SCORE", strength_score);
+
+            int dex = obj.getInt("dex");
+            extras.putInt("DEX_SCORE", dex);
         } catch (JSONException e) {
             e.printStackTrace();
         }

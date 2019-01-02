@@ -109,6 +109,8 @@ public class CreateCharacterScreen extends AppCompatActivity {
         int experienceAmt = Integer.parseInt(experienceBox.getText().toString());
         extras.putInt("EXPERIENCE_AMOUNT", experienceAmt);
 
+
+
         intent.putExtras(extras); // attach the extras to the ability scores screen
 
         startActivity(intent);
