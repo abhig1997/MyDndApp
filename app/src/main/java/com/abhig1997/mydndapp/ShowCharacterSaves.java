@@ -1,6 +1,7 @@
 package com.abhig1997.mydndapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -128,6 +129,106 @@ public class ShowCharacterSaves extends AppCompatActivity {
 
             int dex = obj.getInt("dex");
             extras.putInt("DEX_SCORE", dex);
+
+            int const_score = obj.getInt("const");
+            extras.putInt("CONST_SCORE", const_score);
+
+            int intelligence = obj.getInt("intelligence");
+            extras.putInt("INTELLIGENCE_SCORE", intelligence);
+
+            int wis = obj.getInt("wisdom");
+            extras.putInt("WISDOM_SCORE", wis);
+
+            int cha = obj.getInt("charisma");
+            extras.putInt("CHARISMA_SCORE", cha);
+
+            // now for the skill scores
+            int acrobatics = obj.getInt("acrobatics");
+            extras.putInt("ACROBATICS_SCORE", acrobatics);
+
+            int animal = obj.getInt("animal");
+            extras.putInt("ANIMAL_SCORE", animal);
+
+            int athletics = obj.getInt("athletics");
+            extras.putInt("ATHLETICS_SCORE", athletics);
+
+            int deception = obj.getInt("deception");
+            extras.putInt("DECEPTION_SCORE", deception);
+
+            int history = obj.getInt("history");
+            extras.putInt("HISTORY_SCORE", history);
+
+
+            int insight = obj.getInt("insight");
+            extras.putInt("INSIGHT_SCORE", insight);
+
+
+            int intim = obj.getInt("intimidation");
+            extras.putInt("INTIM_SCORE", intim);
+
+
+            int investigation = obj.getInt("investigation");
+            extras.putInt("INVEST_SCORE", investigation);
+
+
+            int med = obj.getInt("medicine");
+            extras.putInt("MED_SCORE", med);
+
+
+            int nature = obj.getInt("nature");
+            extras.putInt("NATURE_SCORE", nature);
+
+
+            int perception = obj.getInt("perception");
+            extras.putInt("PERCEPTION_SCORE", perception);
+
+
+            int performance = obj.getInt("performance");
+            extras.putInt("PERFORM_SCORE", performance);
+
+
+            int persuasion = obj.getInt("persuasion");
+            extras.putInt("PERSUASION_SCORE", persuasion);
+
+
+            int religion = obj.getInt("religion");
+            extras.putInt("RELIGION_SCORE", religion);
+
+
+            int sleight = obj.getInt("sleight_of_hand");
+            extras.putInt("SLEIGHT_SCORE", sleight);
+
+
+            int stealth = obj.getInt("stealth");
+            extras.putInt("STEALTH_SCORE", stealth);
+
+
+            int survival = obj.getInt("survival");
+            extras.putInt("SURVIVAL_SCORE", survival);
+
+
+            int armor = obj.getInt("armor");
+            extras.putInt("ARMOR_CLASS", armor);
+
+
+            int gold = obj.getInt("gold");
+            extras.putInt("GOLD", gold);
+
+
+            int silver = obj.getInt("silver");
+            extras.putInt("SILVER", silver);
+
+            int copper = obj.getInt("copper");
+            extras.putInt("COPPER", copper);
+
+
+
+            // at this point the bundle is finished, can pass it to the CharacterView screen
+            Intent intent = new Intent(this, CharacterView.class);
+            intent.putExtras(extras);
+            startActivity(intent);
+
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
