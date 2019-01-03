@@ -115,20 +115,31 @@ public class CharacterView extends AppCompatActivity {
      * Display the level of the character
      */
     public void showLevel() {
-        TextView levelBox = (TextView) findViewById(R.id.levelDisplay);
+//        TextView levelBox = (TextView) findViewById(R.id.levelDisplay);
+//        int level = extras.getInt("LEVEL_NUM");
+//        String levelstr = "" + level;
+//        levelBox.setText(levelstr);
+
+        EditText levelBox = (EditText) findViewById(R.id.levelDisplay);
         int level = extras.getInt("LEVEL_NUM");
-        String levelstr = "LVL " + level;
-        levelBox.setText(levelstr);
+//        String levelstr = "" + level;
+        levelBox.setText(Integer.toString(level));
+
     }
 
     /**
      * Displays the current exp amount for the character
      */
     public void showExp() {
-        TextView expBox = (TextView) findViewById(R.id.expPointsDisplay);
+//        TextView expBox = (TextView) findViewById(R.id.expPointsDisplay);
+//        int exp = extras.getInt("EXPERIENCE_AMOUNT");
+//        String expStr = "" + exp;
+//        expBox.setText(expStr);
+
+        EditText expBox = (EditText) findViewById(R.id.expPointsDisplay);
         int exp = extras.getInt("EXPERIENCE_AMOUNT");
-        String expStr = "EXP: " + exp;
-        expBox.setText(expStr);
+//        String expStr = "" + exp;
+        expBox.setText(Integer.toString(exp));
     }
 
     /**
