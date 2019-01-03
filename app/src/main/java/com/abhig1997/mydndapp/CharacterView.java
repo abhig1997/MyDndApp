@@ -2,6 +2,7 @@ package com.abhig1997.mydndapp;
 
 import android.content.Context;
 import android.os.Environment;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -34,6 +35,12 @@ public class CharacterView extends AppCompatActivity {
         // toolbar stuff
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
+
+        // Get a support ActionBar corresponding to this toolbar
+        ActionBar ab = getSupportActionBar();
+
+        // Enable the Up button
+        ab.setDisplayHomeAsUpEnabled(true);
 
         // store the bundle as a class var
         extras = getIntent().getExtras();
