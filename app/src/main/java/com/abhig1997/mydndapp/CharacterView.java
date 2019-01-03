@@ -63,6 +63,10 @@ public class CharacterView extends AppCompatActivity {
 
         // display the armor class
         showAcScore();
+
+        showInitiative();
+
+        showSpeed();
     }
 
     /**
@@ -170,6 +174,18 @@ public class CharacterView extends AppCompatActivity {
         EditText acBox = (EditText) findViewById(R.id.armorClassBox);
         int ac = extras.getInt("ARMOR_CLASS");
         acBox.setText(Integer.toString(ac));
+    }
+
+    public void showInitiative() {
+        EditText initiativeDisplay = (EditText) findViewById(R.id.initiativeDisplay);
+        int init = extras.getInt("INITIATIVE");
+        initiativeDisplay.setText(Integer.toString(init));
+    }
+
+    public void showSpeed() {
+        EditText speedDisplay = (EditText) findViewById(R.id.speedDisplay);
+        int speed = extras.getInt("SPEED");
+        speedDisplay.setText(Integer.toString(speed));
     }
 
     /**
