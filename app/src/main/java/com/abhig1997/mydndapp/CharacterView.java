@@ -70,7 +70,7 @@ public class CharacterView extends AppCompatActivity {
 
         showSpeed();
 
-        saveHpAfterChange();
+        createAllChangeListeners();
     }
 
     // Sets the class variable to show any updated extras
@@ -214,6 +214,56 @@ public class CharacterView extends AppCompatActivity {
         EditText speedDisplay = (EditText) findViewById(R.id.speedDisplay);
         int speed = extras.getInt("SPEED");
         speedDisplay.setText(Integer.toString(speed));
+    }
+
+    // Helper method to call all the text change listeners that save changed stats
+    public void createAllChangeListeners() {
+        saveHpAfterChange();
+        saveLevel();
+    }
+
+    public void saveLevel() {
+        final EditText levelDisplay = (EditText) findViewById(R.id.levelDisplay);
+        levelDisplay.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                try {
+                    int newLevel = Integer.parseInt(levelDisplay.getText().toString()); // the new hp
+                    // of the char
+//                    System.out.println("newHp is " + newHp);
+
+                    // need to save that new HP into the file
+
+                    Bundle currExtras = getIntent().getExtras();
+
+                    // update the extras
+//                    getExtras();
+
+                    // add the newHP to the bundle
+                    currExtras.putInt("LEVEL_NUM", newLevel);
+
+//                    System.out.println("The hp stored is " + currExtras.getInt("HIT_POINTS"));
+
+                    extras = currExtras; // update the extras bundle
+
+                    // now save the bundle to the file
+                    saveAllExtras();
+                }
+                catch (NumberFormatException nfe) {
+                    nfe.printStackTrace();
+                }
+            }
+        });
     }
 
     // Saves the HP to the JSON file if the EditText is changed
