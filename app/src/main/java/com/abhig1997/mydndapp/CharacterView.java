@@ -4,6 +4,8 @@ import android.content.Context;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.widget.EditText;
@@ -67,6 +69,13 @@ public class CharacterView extends AppCompatActivity {
         showInitiative();
 
         showSpeed();
+
+        saveHpAfterChange();
+    }
+
+    // Sets the class variable to show any updated extras
+    public void getExtras() {
+        extras = getIntent().getExtras();
     }
 
     /**
@@ -140,61 +149,123 @@ public class CharacterView extends AppCompatActivity {
         strengthBox.setText(Integer.toString(strengthScore));
     }
 
+    // Display the dexterity score
     public void showDexScore() {
         EditText dexBox = (EditText) findViewById(R.id.dexScoreBox);
         int dexScore = extras.getInt("DEX_SCORE");
         dexBox.setText(Integer.toString(dexScore));
     }
 
+    // Display the constitution score
     public void showConstScore() {
         EditText constBox = (EditText) findViewById(R.id.constScoreBox);
         int constScore = extras.getInt("CONST_SCORE");
         constBox.setText(Integer.toString(constScore));
     }
 
+    // Display the intelligence score
     public void showIntScore() {
         EditText intBox = (EditText) findViewById(R.id.intelligenceScoreBox);
         int intScore = extras.getInt("INTELLIGENCE_SCORE");
         intBox.setText(Integer.toString(intScore));
     }
 
+    // Display the wisdom score
     public void showWisScore() {
         EditText wisBox = (EditText) findViewById(R.id.wisdomScoreBox);
         int wisScore = extras.getInt("WISDOM_SCORE");
         wisBox.setText(Integer.toString(wisScore));
     }
 
+    // Display the charisma score
     public void showCharismaScore() {
         EditText chaBox = (EditText) findViewById(R.id.charismaScoreBox);
         int chaScore = extras.getInt("CHARISMA_SCORE");
         chaBox.setText(Integer.toString(chaScore));
     }
 
+    // Display the armor class
     public void showAcScore() {
         EditText acBox = (EditText) findViewById(R.id.armorClassBox);
         int ac = extras.getInt("ARMOR_CLASS");
         acBox.setText(Integer.toString(ac));
     }
 
+    // Display the initiative bonus
     public void showInitiative() {
         EditText initiativeDisplay = (EditText) findViewById(R.id.initiativeDisplay);
         int init = extras.getInt("INITIATIVE");
         initiativeDisplay.setText(Integer.toString(init));
     }
 
+    // Display the speed of the character
     public void showSpeed() {
         EditText speedDisplay = (EditText) findViewById(R.id.speedDisplay);
         int speed = extras.getInt("SPEED");
         speedDisplay.setText(Integer.toString(speed));
     }
 
+    // Saves the HP to the JSON file if the EditText is changed
+    public void saveHpAfterChange() {
+        final EditText hpDisplay = (EditText) findViewById(R.id.hpDisplay);
+        hpDisplay.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                // this should be what i need
+//                System.out.println("finna try to save");
+                try {
+                    System.out.println("in here");
+                    int newHp = Integer.parseInt(hpDisplay.getText().toString()); // the new hp
+                    // of the char
+                    System.out.println("newHp is " + newHp);
+
+                    // need to save that new HP into the file
+
+                    Bundle currExtras = getIntent().getExtras();
+
+                    // update the extras
+//                    getExtras();
+
+                    // add the newHP to the bundle
+                    currExtras.putInt("HIT_POINTS", newHp);
+
+                    System.out.println("The hp stored is " + currExtras.getInt("HIT_POINTS"));
+
+                    extras = currExtras; // update the extras bundle
+
+                    // now save the bundle to the file
+                    saveAllExtras();
+
+                    return;
+                }
+                catch (NumberFormatException nfe) {
+                    nfe.printStackTrace();
+                }
+
+            }
+        });
+    }
+
     /**
-     * Saves all the extras associated with the current character
+     * Saves all the character stats into a JSONObject and stores the file in internal storage
      * @return false if the saving is unsuccessful
      *         true  if the saving is successful
      */
     public boolean saveAllExtras() {
-        Bundle extras = getIntent().getExtras();
+//        Bundle extras = getIntent().getExtras();
+//        getExtras();
+
+        System.out.println("hit points is " + extras.getInt("HIT_POINTS"));
 
         String character_name = extras.getString("CHARACTER_NAME");
 
