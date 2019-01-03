@@ -221,6 +221,45 @@ public class CharacterView extends AppCompatActivity {
         saveHpAfterChange();
         saveLevel();
         saveExp();
+        saveInitiative();
+    }
+
+    public void saveInitiative() {
+        final EditText initiativeDisplay = (EditText) findViewById(R.id.initiativeDisplay);
+        initiativeDisplay.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                try {
+                    int newInit = Integer.parseInt(initiativeDisplay.getText().toString()); // the new hp
+                    // of the char
+
+                    // need to save that new HP into the file
+
+                    Bundle currExtras = getIntent().getExtras();
+                    // add the newHP to the bundle
+                    currExtras.putInt("INITIATIVE", newInit);
+
+                    extras = currExtras; // update the extras bundle
+
+                    // now save the bundle to the file
+                    saveAllExtras();
+                }
+                catch (NumberFormatException nfe) {
+                    nfe.printStackTrace();
+                }
+
+            }
+        });
     }
 
     // the next methods are the methods that add text changed listeners
@@ -360,7 +399,7 @@ public class CharacterView extends AppCompatActivity {
 //        Bundle extras = getIntent().getExtras();
 //        getExtras();
 
-        System.out.println("hit points is " + extras.getInt("HIT_POINTS"));
+//        System.out.println("hit points is " + extras.getInt("HIT_POINTS"));
 
         String character_name = extras.getString("CHARACTER_NAME");
 
@@ -409,6 +448,8 @@ public class CharacterView extends AppCompatActivity {
             obj.put("gold", extras.getInt("GOLD"));
             obj.put("silver", extras.getInt("SILVER"));
             obj.put("copper", extras.getInt("COPPER"));
+            obj.put("initiative", extras.getInt("INITIATIVE"));
+            obj.put("speed", extras.getInt("SPEED"));
 
 
             toWrite = obj.toString(4);

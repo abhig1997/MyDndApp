@@ -221,6 +221,12 @@ public class ShowCharacterSaves extends AppCompatActivity {
             int copper = obj.getInt("copper");
             extras.putInt("COPPER", copper);
 
+            int initiative = obj.getInt("initiative");
+            extras.putInt("INITIATIVE", initiative);
+
+            int speed = obj.getInt("speed");
+            extras.putInt("SPEED", speed);
+
 
 
             // at this point the bundle is finished, can pass it to the CharacterView screen
