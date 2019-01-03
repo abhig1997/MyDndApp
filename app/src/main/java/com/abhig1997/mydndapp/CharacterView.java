@@ -220,6 +220,40 @@ public class CharacterView extends AppCompatActivity {
     public void createAllChangeListeners() {
         saveHpAfterChange();
         saveLevel();
+        saveExp();
+    }
+
+    // the next methods are the methods that add text changed listeners
+    public void saveExp() {
+        final EditText expDisplay = (EditText) findViewById(R.id.expPointsDisplay);
+        expDisplay.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                int newExp = Integer.parseInt(expDisplay.getText().toString()); // the new hp
+                // of the char
+
+                // need to save that new HP into the file
+
+                Bundle currExtras = getIntent().getExtras();
+                // add the newHP to the bundle
+                currExtras.putInt("EXPERIENCE_AMOUNT", newExp);
+
+                extras = currExtras; // update the extras bundle
+
+                // now save the bundle to the file
+                saveAllExtras();
+            }
+        });
     }
 
     public void saveLevel() {
