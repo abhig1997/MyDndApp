@@ -224,6 +224,241 @@ public class CharacterView extends AppCompatActivity {
         saveInitiative();
         saveArmorClass();
         saveSpeed();
+        saveStrength();
+        saveDex();
+        saveConst();
+        saveIntelligence();
+        saveWis();
+        saveCharisma();
+    }
+
+    public void saveCharisma() {
+        final EditText chaDisplay = (EditText) findViewById(R.id.charismaScoreBox);
+        chaDisplay.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                try {
+                    int newCha = Integer.parseInt(chaDisplay.getText().toString()); // the new hp
+                    // of the char
+
+                    // need to save that new HP into the file
+
+                    Bundle currExtras = getIntent().getExtras();
+                    // add the newHP to the bundle
+                    currExtras.putInt("CHARISMA_SCORE", newCha);
+
+                    extras = currExtras; // update the extras bundle
+
+                    // now save the bundle to the file
+                    saveAllExtras();
+                }
+                catch (NumberFormatException nfe) {
+                    nfe.printStackTrace();
+                }
+
+            }
+        });
+    }
+
+    public void saveWis() {
+        final EditText wisdomDisplay = (EditText) findViewById(R.id.wisdomScoreBox);
+        wisdomDisplay.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                try {
+                    int newWis = Integer.parseInt(wisdomDisplay.getText().toString()); // the new hp
+                    // of the char
+
+                    // need to save that new HP into the file
+
+                    Bundle currExtras = getIntent().getExtras();
+                    // add the newHP to the bundle
+                    currExtras.putInt("WISDOM_SCORE", newWis);
+
+                    extras = currExtras; // update the extras bundle
+
+                    // now save the bundle to the file
+                    saveAllExtras();
+                }
+                catch (NumberFormatException nfe) {
+                    nfe.printStackTrace();
+                }
+
+            }
+        });
+    }
+
+    public void saveIntelligence() {
+        final EditText intelligenceDisplay = (EditText) findViewById(R.id.intelligenceScoreBox);
+        intelligenceDisplay.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                try {
+                    int newIntelligence = Integer.parseInt(intelligenceDisplay.getText().toString()); // the new hp
+                    // of the char
+
+                    // need to save that new HP into the file
+
+                    Bundle currExtras = getIntent().getExtras();
+                    // add the newHP to the bundle
+                    currExtras.putInt("INTELLIGENCE_SCORE", newIntelligence);
+
+                    extras = currExtras; // update the extras bundle
+
+                    // now save the bundle to the file
+                    saveAllExtras();
+                }
+                catch (NumberFormatException nfe) {
+                    nfe.printStackTrace();
+                }
+
+            }
+        });
+    }
+
+    public void saveConst() {
+        final EditText constDisplay = (EditText) findViewById(R.id.constScoreBox);
+        constDisplay.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                try {
+                    int newConst = Integer.parseInt(constDisplay.getText().toString()); // the new hp
+                    // of the char
+
+                    // need to save that new HP into the file
+
+                    Bundle currExtras = getIntent().getExtras();
+                    // add the newHP to the bundle
+                    currExtras.putInt("CONST_SCORE", newConst);
+
+                    extras = currExtras; // update the extras bundle
+
+                    // now save the bundle to the file
+                    saveAllExtras();
+                }
+                catch (NumberFormatException nfe) {
+                    nfe.printStackTrace();
+                }
+
+            }
+        });
+    }
+
+
+    public void saveDex() {
+        final EditText dexDisplay = (EditText) findViewById(R.id.dexScoreBox);
+        dexDisplay.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                try {
+                    int newDex = Integer.parseInt(dexDisplay.getText().toString()); // the new hp
+                    // of the char
+
+                    // need to save that new HP into the file
+
+                    Bundle currExtras = getIntent().getExtras();
+                    // add the newHP to the bundle
+                    currExtras.putInt("DEX_SCORE", newDex);
+
+                    extras = currExtras; // update the extras bundle
+
+                    // now save the bundle to the file
+                    saveAllExtras();
+                }
+                catch (NumberFormatException nfe) {
+                    nfe.printStackTrace();
+                }
+
+            }
+        });
+    }
+
+    public void saveStrength() {
+        final EditText strengthDisplay = (EditText) findViewById(R.id.strengthScoreBox);
+        strengthDisplay.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                try {
+                    int newStrength = Integer.parseInt(strengthDisplay.getText().toString()); // the new hp
+                    // of the char
+
+                    // need to save that new HP into the file
+
+                    Bundle currExtras = getIntent().getExtras();
+                    // add the newHP to the bundle
+                    currExtras.putInt("STRENGTH_SCORE", newStrength);
+
+                    extras = currExtras; // update the extras bundle
+
+                    // now save the bundle to the file
+                    saveAllExtras();
+                }
+                catch (NumberFormatException nfe) {
+                    nfe.printStackTrace();
+                }
+
+            }
+        });
     }
 
     public void saveSpeed() {
@@ -249,7 +484,7 @@ public class CharacterView extends AppCompatActivity {
 
                     Bundle currExtras = getIntent().getExtras();
                     // add the newHP to the bundle
-                    currExtras.putInt("INITIATIVE", newSpeed);
+                    currExtras.putInt("SPEED", newSpeed);
 
                     extras = currExtras; // update the extras bundle
 
