@@ -222,6 +222,84 @@ public class CharacterView extends AppCompatActivity {
         saveLevel();
         saveExp();
         saveInitiative();
+        saveArmorClass();
+        saveSpeed();
+    }
+
+    public void saveSpeed() {
+        final EditText speedDisplay = (EditText) findViewById(R.id.speedDisplay);
+        speedDisplay.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                try {
+                    int newSpeed = Integer.parseInt(speedDisplay.getText().toString()); // the new hp
+                    // of the char
+
+                    // need to save that new HP into the file
+
+                    Bundle currExtras = getIntent().getExtras();
+                    // add the newHP to the bundle
+                    currExtras.putInt("INITIATIVE", newSpeed);
+
+                    extras = currExtras; // update the extras bundle
+
+                    // now save the bundle to the file
+                    saveAllExtras();
+                }
+                catch (NumberFormatException nfe) {
+                    nfe.printStackTrace();
+                }
+
+            }
+        });
+    }
+
+    public void saveArmorClass() {
+        final EditText acDisplay = (EditText) findViewById(R.id.armorClassBox);
+        acDisplay.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                try {
+                    int newArmorClass = Integer.parseInt(acDisplay.getText().toString()); // the new hp
+                    // of the char
+
+                    // need to save that new HP into the file
+
+                    Bundle currExtras = getIntent().getExtras();
+                    // add the newHP to the bundle
+                    currExtras.putInt("ARMOR_CLASS", newArmorClass);
+
+                    extras = currExtras; // update the extras bundle
+
+                    // now save the bundle to the file
+                    saveAllExtras();
+                }
+                catch (NumberFormatException nfe) {
+                    nfe.printStackTrace();
+                }
+
+            }
+        });
     }
 
     public void saveInitiative() {
