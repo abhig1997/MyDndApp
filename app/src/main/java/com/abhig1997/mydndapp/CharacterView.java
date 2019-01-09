@@ -88,6 +88,11 @@ public class CharacterView extends AppCompatActivity {
     }
 
 
+    /**
+     * Creates the options for the menu
+     * @param menu
+     * @return true if the menu is made successfully
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -98,10 +103,13 @@ public class CharacterView extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.menu_button:
-                // User chose the "Settings" item, show the app settings UI...
+            case R.id.proficiencies:
+
                 return true;
 
+            case R.id.inventory:
+
+                return true;
             default:
                 // If we got here, the user's action was not recognized.
                 // Invoke the superclass to handle it.
