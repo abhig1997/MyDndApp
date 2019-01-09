@@ -1,6 +1,7 @@
 package com.abhig1997.mydndapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Environment;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -116,6 +117,16 @@ public class CharacterView extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
 
         }
+    }
+
+    /**
+     * Navigates to the proficiencies page
+     */
+    public void goToProficienciesPage() {
+        Intent intent = new Intent(this, ViewProficiencies.class);
+        this.getExtras();
+        intent.putExtras(this.extras);
+        startActivity(intent);
     }
 
     // Sets the class variable to show any updated extras
