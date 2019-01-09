@@ -41,6 +41,15 @@ public class EnterFinalStats extends AppCompatActivity {
         int copper_amount = Integer.parseInt(copper_box.getText().toString());
         updatedExtras.putInt("COPPER", copper_amount);
 
+        // add initiative
+        EditText initBox = (EditText) findViewById(R.id.initiativeDisplay);
+        int initiative = Integer.parseInt(initBox.getText().toString());
+        updatedExtras.putInt("INITIATIVE", initiative);
+
+        // add speed
+        EditText speedBox = (EditText) findViewById(R.id.speedDisplay);
+        int speed = Integer.parseInt(speedBox.getText().toString());
+        updatedExtras.putInt("SPEED", speed);
 
         intent.putExtras(updatedExtras);
 
