@@ -124,7 +124,7 @@ public class CharacterView extends AppCompatActivity {
      */
     public void goToProficienciesPage() {
         Intent intent = new Intent(this, ViewProficiencies.class);
-        this.getExtras();
+//        this.getExtras();
         intent.putExtras(this.extras);
         startActivity(intent);
     }
