@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.EditText;
 
 import org.json.JSONObject;
 
@@ -34,7 +35,7 @@ public class ViewProficiencies extends AppCompatActivity {
 
         this.getExtras();
 
-        System.out.println("THEIR EXP IS" + extras.getInt("EXPERIENCE_AMOUNT"));
+        this.displayAllSkillScores();
 
     }
 
@@ -170,6 +171,13 @@ public class ViewProficiencies extends AppCompatActivity {
             return false;
         }
 
+    }
+
+    public void displayAllSkillScores() {
+        EditText acrobaticsDisplay = (EditText) findViewById(R.id.acrobaticsDisplay);
+        int acrobatics_score = extras.getInt("ACROBATICS_SCORE");
+        System.out.println("acrobatics score is " + acrobatics_score);
+        acrobaticsDisplay.setText(Integer.toString(acrobatics_score));
     }
 
 

@@ -39,9 +39,9 @@
         <TextView
             android:id="@+id/acrobaticsTitle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="32dp"
             android:layout_marginEnd="8dp"
             android:text="Acrobatics"
             android:textAlignment="center"
@@ -54,24 +54,24 @@
 
         <EditText
             android:id="@+id/acrobaticsDisplay"
-            android:layout_width="88dp"
-            android:layout_height="24dp"
+            android:layout_width="56dp"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="8dp"
             android:ems="10"
             android:inputType="number"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.079"
+            app:layout_constraintHorizontal_bias="0.089"
             app:layout_constraintStart_toEndOf="@+id/acrobaticsTitle"
             app:layout_constraintTop_toBottomOf="@+id/proficienciesTitle" />
 
         <TextView
             android:id="@+id/animalTitle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="44dp"
             android:layout_marginStart="40dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -86,22 +86,22 @@
 
         <EditText
             android:id="@+id/animalDisplay"
-            android:layout_width="88dp"
-            android:layout_height="24dp"
+            android:layout_width="56dp"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:ems="10"
             android:inputType="number"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.08"
+            app:layout_constraintHorizontal_bias="0.089"
             app:layout_constraintStart_toEndOf="@+id/animalTitle"
             app:layout_constraintTop_toBottomOf="@+id/acrobaticsDisplay" />
 
         <TextView
             android:id="@+id/arcanaTitle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -116,8 +116,8 @@
 
         <EditText
             android:id="@+id/arcanaDisplay"
-            android:layout_width="88dp"
-            android:layout_height="24dp"
+            android:layout_width="56dp"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -135,7 +135,7 @@
         <TextView
             android:id="@+id/athleticsTitle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -150,8 +150,8 @@
 
         <EditText
             android:id="@+id/athleticsDisplay"
-            android:layout_width="88dp"
-            android:layout_height="24dp"
+            android:layout_width="56dp"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -169,7 +169,7 @@
         <TextView
             android:id="@+id/deceptionTitle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -184,8 +184,8 @@
 
         <EditText
             android:id="@+id/deceptionDisplay"
-            android:layout_width="88dp"
-            android:layout_height="24dp"
+            android:layout_width="56dp"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -203,7 +203,7 @@
         <TextView
             android:id="@+id/historyTitle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -218,8 +218,8 @@
 
         <EditText
             android:id="@+id/historyDisplay"
-            android:layout_width="88dp"
-            android:layout_height="24dp"
+            android:layout_width="56dp"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -237,7 +237,7 @@
         <TextView
             android:id="@+id/insightTitle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -252,8 +252,8 @@
 
         <EditText
             android:id="@+id/insightDisplay"
-            android:layout_width="88dp"
-            android:layout_height="24dp"
+            android:layout_width="56dp"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -271,7 +271,7 @@
         <TextView
             android:id="@+id/intimidationTitle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -286,8 +286,8 @@
 
         <EditText
             android:id="@+id/intimidationDisplay"
-            android:layout_width="88dp"
-            android:layout_height="24dp"
+            android:layout_width="56dp"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -305,7 +305,7 @@
         <TextView
             android:id="@+id/investigationTitle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -320,8 +320,8 @@
 
         <EditText
             android:id="@+id/investigationDisplay"
-            android:layout_width="88dp"
-            android:layout_height="24dp"
+            android:layout_width="56dp"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -339,7 +339,7 @@
         <TextView
             android:id="@+id/medicineTitle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -354,8 +354,8 @@
 
         <EditText
             android:id="@+id/medicineDisplay"
-            android:layout_width="88dp"
-            android:layout_height="24dp"
+            android:layout_width="56dp"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -373,7 +373,7 @@
         <TextView
             android:id="@+id/natureTitle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -388,8 +388,8 @@
 
         <EditText
             android:id="@+id/natureDisplay"
-            android:layout_width="88dp"
-            android:layout_height="24dp"
+            android:layout_width="56dp"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -407,7 +407,7 @@
         <TextView
             android:id="@+id/perceptionTitle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -422,8 +422,8 @@
 
         <EditText
             android:id="@+id/perceptionDisplay"
-            android:layout_width="88dp"
-            android:layout_height="24dp"
+            android:layout_width="56dp"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -441,7 +441,7 @@
         <TextView
             android:id="@+id/performanceTitle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -456,8 +456,8 @@
 
         <EditText
             android:id="@+id/performanceDisplay"
-            android:layout_width="88dp"
-            android:layout_height="24dp"
+            android:layout_width="56dp"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -475,7 +475,7 @@
         <TextView
             android:id="@+id/persuasionTitle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -490,8 +490,8 @@
 
         <EditText
             android:id="@+id/persuasionDisplay"
-            android:layout_width="88dp"
-            android:layout_height="24dp"
+            android:layout_width="56dp"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -509,7 +509,7 @@
         <TextView
             android:id="@+id/religionTitle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -524,8 +524,8 @@
 
         <EditText
             android:id="@+id/religionDisplay"
-            android:layout_width="88dp"
-            android:layout_height="24dp"
+            android:layout_width="56dp"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -543,7 +543,7 @@
         <TextView
             android:id="@+id/sleightOfHandTitle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -558,8 +558,8 @@
 
         <EditText
             android:id="@+id/sleightOfHandDisplay"
-            android:layout_width="88dp"
-            android:layout_height="24dp"
+            android:layout_width="56dp"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -577,7 +577,7 @@
         <TextView
             android:id="@+id/stealthTitle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -592,8 +592,8 @@
 
         <EditText
             android:id="@+id/stealthDisplay"
-            android:layout_width="88dp"
-            android:layout_height="24dp"
+            android:layout_width="56dp"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -611,7 +611,7 @@
         <TextView
             android:id="@+id/survivalTitle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -626,8 +626,8 @@
 
         <EditText
             android:id="@+id/survivalDisplay"
-            android:layout_width="88dp"
-            android:layout_height="24dp"
+            android:layout_width="56dp"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
