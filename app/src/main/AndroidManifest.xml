@@ -28,7 +28,9 @@
             android:name=".CharacterView"
             android:parentActivityName=".MainCharacterScreen" />
         <activity android:name=".ShowCharacterSaves" />
-        <activity android:name=".ViewProficiencies"></activity>
+        <activity
+            android:name="com.abhig1997.mydndapp.ViewProficiencies"
+            android:parentActivityName="com.abhig1997.mydndapp.CharacterView" />
     </application>
 
 </manifest>
