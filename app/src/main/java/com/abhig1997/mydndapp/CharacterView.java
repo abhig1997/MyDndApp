@@ -105,7 +105,7 @@ public class CharacterView extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.proficiencies:
-
+                goToProficienciesPage();
                 return true;
 
             case R.id.inventory:
@@ -120,7 +120,7 @@ public class CharacterView extends AppCompatActivity {
     }
 
     /**
-     * Navigates to the proficiencies page
+     * Navigates to the proficiencies page when that option is selected in the overflow menu
      */
     public void goToProficienciesPage() {
         Intent intent = new Intent(this, ViewProficiencies.class);
