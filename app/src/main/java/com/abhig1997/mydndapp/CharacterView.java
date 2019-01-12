@@ -111,12 +111,22 @@ public class CharacterView extends AppCompatActivity {
             case R.id.inventory:
                 goToInventoryPage();
                 return true;
+
+            case R.id.weapons:
+                goToWeaponsView();
+                return true;
             default:
                 // If we got here, the user's action was not recognized.
                 // Invoke the superclass to handle it.
                 return super.onOptionsItemSelected(item);
 
         }
+    }
+
+    private void goToWeaponsView() {
+        Intent intent = new Intent(this, ViewWeapons.class);
+        intent.putExtras(this.extras);
+        startActivity(intent);
     }
 
     public void goToInventoryPage() {

@@ -9,11 +9,11 @@
             <item android:id="@+id/characterView"
                 android:title="Character View"
                 ></item>
-            <item android:id="@+id/proficiencies"
-                android:title="Proficiencies"
+            <item android:id="@+id/inventory"
+                android:title="Inventory"
                 ></item>
-            <item android:id="@+id/weapons"
-                android:title="Weapons"></item>
+            <item android:id="@+id/proficiencies"
+                android:title="Proficiencies"></item>
         </menu>
     </item>
 </menu>

@@ -70,6 +70,10 @@ public class ViewProficiencies extends AppCompatActivity {
                 goToInventoryView();
                 return true;
 
+            case R.id.weapons:
+                goToWeaponsView();
+                return true;
+
             default:
                 // If we got here, the user's action was not recognized.
                 // Invoke the superclass to handle it.
@@ -77,12 +81,17 @@ public class ViewProficiencies extends AppCompatActivity {
         }
     }
 
+    private void goToWeaponsView() {
+        Intent intent = new Intent(this, ViewWeapons.class);
+        intent.putExtras(this.extras);
+        startActivity(intent);
+    }
+
     /**
      * Navigates to the Character View page
      */
     public void goToCharacterView() {
         Intent intent = new Intent(this, CharacterView.class);
-//        this.getExtras();
         intent.putExtras(this.extras);
         startActivity(intent);
     }

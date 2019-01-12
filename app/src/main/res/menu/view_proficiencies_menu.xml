@@ -12,6 +12,8 @@
             <item android:id="@+id/inventory"
                 android:title="Inventory"
                 ></item>
+            <item android:id="@+id/weapons"
+                android:title="Weapons"></item>
         </menu>
     </item>
 </menu>
