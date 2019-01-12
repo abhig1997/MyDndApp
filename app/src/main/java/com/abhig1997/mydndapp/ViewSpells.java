@@ -5,9 +5,12 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.EditText;
 
 import org.json.JSONObject;
 
@@ -31,6 +34,9 @@ public class ViewSpells extends AppCompatActivity {
 
         // set extras
         this.extras = getIntent().getExtras();
+
+        // display spells
+        displaySpells();
     }
 
     /**
@@ -96,6 +102,57 @@ public class ViewSpells extends AppCompatActivity {
         Intent intent = new Intent(this, CharacterView.class);
         intent.putExtras(this.extras);
         startActivity(intent);
+    }
+
+    private void displaySpells() {
+        EditText spellsDisplay = (EditText) findViewById(R.id.spellsDisplay);
+        String spellsContent = this.extras.getString("SPELLS");
+        if (spellsContent == null || spellsContent.length() == 0) {
+            spellsDisplay.setText("No spells :(");
+        }
+        else {
+            spellsDisplay.setText(spellsContent);
+        }
+    }
+
+    private void saveSpellsChanges() {
+        final EditText spellsDisplay = (EditText) findViewById(R.id.spellsDisplay);
+        spellsDisplay.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                try {
+//                    int newVal = Integer.parseInt(weaponsDisplay.getText().toString()); // the new hp
+                    // of the char
+                    String newVal = spellsDisplay.getText().toString();
+
+                    // need to save that new HP into the file
+
+                    Bundle currExtras = getIntent().getExtras();
+
+                    // add the newHP to the bundle
+                    currExtras.putString("SPELLS", newVal);
+
+                    extras = currExtras; // update the extras bundle
+
+                    // now save the bundle to the file
+                    saveAllExtras();
+                }
+                catch (NumberFormatException nfe) {
+                    nfe.printStackTrace();
+                }
+
+            }
+        });
     }
 
     /**
