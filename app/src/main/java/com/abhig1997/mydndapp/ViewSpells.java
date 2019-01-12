@@ -18,28 +18,28 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class ViewWeapons extends AppCompatActivity {
+public class ViewSpells extends AppCompatActivity {
 
     Bundle extras;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_weapons);
+        setContentView(R.layout.activity_view_spells);
 
         // toolbar stuff
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.view_weapons_toolbar);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.view_spells_toolbar);
         setSupportActionBar(myToolbar);
 
 
         // set extras
         this.extras = getIntent().getExtras();
 
-        // display current weapons
-        displayWeapons();
+        // display spells
+        displaySpells();
 
-        // add TextWatcher to weapons list
-        saveWeaponsChanges();
+        // save spells
+        saveSpellsChanges();
     }
 
     /**
@@ -50,12 +50,9 @@ public class ViewWeapons extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.view_proficiencies_menu, menu);
+        inflater.inflate(R.menu.view_spells_menu, menu);
         return true;
     }
-
-
-
 
     /**
      * Handles the navigation of the menu in the toolbar
@@ -75,8 +72,8 @@ public class ViewWeapons extends AppCompatActivity {
                 goToProficienciesView();
                 return true;
 
-            case R.id.spells:
-                goToSpellsView();
+            case R.id.weapons:
+                goToWeaponsView();
                 return true;
 
             default:
@@ -86,7 +83,7 @@ public class ViewWeapons extends AppCompatActivity {
         }
     }
 
-    private void goToSpellsView() {
+    private void goToWeaponsView() {
         Intent intent = new Intent(this, ViewSpells.class);
         intent.putExtras(this.extras);
         startActivity(intent);
@@ -110,20 +107,20 @@ public class ViewWeapons extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void displayWeapons() {
-        EditText weaponsDisplay = (EditText) findViewById(R.id.weaponsDisplay);
-        String weaponsContent = extras.getString("WEAPONS");
-        if (weaponsContent == null || weaponsContent.length() == 0) {
-            weaponsDisplay.setText("No weapons!");
+    private void displaySpells() {
+        EditText spellsDisplay = (EditText) findViewById(R.id.spellsDisplay);
+        String spellsContent = this.extras.getString("SPELLS");
+        if (spellsContent == null || spellsContent.length() == 0) {
+            spellsDisplay.setText("No spells :(");
         }
         else {
-            weaponsDisplay.setText(weaponsContent);
+            spellsDisplay.setText(spellsContent);
         }
     }
 
-    public void saveWeaponsChanges() {
-        final EditText weaponsDisplay = (EditText) findViewById(R.id.weaponsDisplay);
-        weaponsDisplay.addTextChangedListener(new TextWatcher() {
+    private void saveSpellsChanges() {
+        final EditText spellsDisplay = (EditText) findViewById(R.id.spellsDisplay);
+        spellsDisplay.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -139,14 +136,14 @@ public class ViewWeapons extends AppCompatActivity {
                 try {
 //                    int newVal = Integer.parseInt(weaponsDisplay.getText().toString()); // the new hp
                     // of the char
-                    String newVal = weaponsDisplay.getText().toString();
+                    String newVal = spellsDisplay.getText().toString();
 
                     // need to save that new HP into the file
 
                     Bundle currExtras = getIntent().getExtras();
 
                     // add the newHP to the bundle
-                    currExtras.putString("WEAPONS", newVal);
+                    currExtras.putString("SPELLS", newVal);
 
                     extras = currExtras; // update the extras bundle
 
@@ -160,8 +157,6 @@ public class ViewWeapons extends AppCompatActivity {
             }
         });
     }
-
-
 
     /**
      * Saves all the character stats into a JSONObject and stores the file in internal storage

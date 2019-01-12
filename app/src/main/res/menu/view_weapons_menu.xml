@@ -14,6 +14,8 @@
                 ></item>
             <item android:id="@+id/proficiencies"
                 android:title="Proficiencies"></item>
+            <item android:id="@+id/spells"
+                android:title="Spells"></item>
         </menu>
     </item>
 </menu>

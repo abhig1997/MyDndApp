@@ -32,7 +32,8 @@
             android:name=".ViewProficiencies"
             android:parentActivityName=".CharacterView" />
         <activity android:name=".ViewInventory" />
-        <activity android:name=".ViewWeapons"></activity>
+        <activity android:name=".ViewWeapons" />
+        <activity android:name=".ViewSpells"></activity>
     </application>
 
 </manifest>

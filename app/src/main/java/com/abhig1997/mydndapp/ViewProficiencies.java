@@ -73,12 +73,22 @@ public class ViewProficiencies extends AppCompatActivity {
             case R.id.weapons:
                 goToWeaponsView();
                 return true;
+            case R.id.spells:
+                goToSpellsView();
+                return true;
+
 
             default:
                 // If we got here, the user's action was not recognized.
                 // Invoke the superclass to handle it.
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    private void goToSpellsView() {
+        Intent intent = new Intent(this, ViewSpells.class);
+        intent.putExtras(this.extras);
+        startActivity(intent);
     }
 
     private void goToWeaponsView() {
@@ -184,6 +194,14 @@ public class ViewProficiencies extends AppCompatActivity {
             }
             else {
                 obj.put("weapons", extras.getString("WEAPONS"));
+            }
+
+            if (extras.getString("SPELLS") == null || extras.getString("SPELLS").length() == 0) {
+                obj.put("spells", "No spells");
+                extras.putString("SPELLS", "No spells");
+            }
+            else {
+                obj.put("spells", extras.getString("SPELLS"));
             }
 
 
