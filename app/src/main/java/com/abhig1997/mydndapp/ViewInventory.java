@@ -1,11 +1,15 @@
 package com.abhig1997.mydndapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.EditText;
 
 import org.json.JSONObject;
@@ -37,6 +41,57 @@ public class ViewInventory extends AppCompatActivity {
         saveAllChanges();
 
     }
+
+
+    /**
+     * Creates the options for the menu
+     * @param menu
+     * @return true if the menu is made successfully
+     */
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.view_inventory_menu, menu);
+        return true;
+    }
+
+    /**
+     * Handles the navigation of the menu in the toolbar
+     * @param item
+     * @return
+     */
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.characterView:
+                goToCharacterView();
+                return true;
+            case R.id.proficiencies:
+                goToProficienciesView();
+                return true;
+
+            default:
+                // If we got here, the user's action was not recognized.
+                // Invoke the superclass to handle it.
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    private void goToProficienciesView() {
+        Intent intent = new Intent(this, ViewProficiencies.class);
+        intent.putExtras(this.extras);
+        startActivity(intent);
+    }
+
+    /**
+     * Navigates to the Character View page
+     */
+    public void goToCharacterView() {
+        Intent intent = new Intent(this, CharacterView.class);
+//        this.getExtras();
+        intent.putExtras(this.extras);
+        startActivity(intent);
+    }
+
 
     public void getExtras() {this.extras = getIntent().getExtras();}
 

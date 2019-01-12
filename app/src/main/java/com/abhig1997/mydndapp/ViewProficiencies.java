@@ -67,7 +67,7 @@ public class ViewProficiencies extends AppCompatActivity {
                 goToCharacterView();
                 return true;
             case R.id.inventory:
-
+                goToInventoryView();
                 return true;
 
             default:
@@ -82,6 +82,16 @@ public class ViewProficiencies extends AppCompatActivity {
      */
     public void goToCharacterView() {
         Intent intent = new Intent(this, CharacterView.class);
+//        this.getExtras();
+        intent.putExtras(this.extras);
+        startActivity(intent);
+    }
+
+    /**
+     * Navigates to the Character View page
+     */
+    public void goToInventoryView() {
+        Intent intent = new Intent(this, ViewInventory.class);
 //        this.getExtras();
         intent.putExtras(this.extras);
         startActivity(intent);
