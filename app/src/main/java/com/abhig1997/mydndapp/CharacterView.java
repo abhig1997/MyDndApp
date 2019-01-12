@@ -109,7 +109,7 @@ public class CharacterView extends AppCompatActivity {
                 return true;
 
             case R.id.inventory:
-
+                goToInventoryPage();
                 return true;
             default:
                 // If we got here, the user's action was not recognized.
@@ -117,6 +117,12 @@ public class CharacterView extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
 
         }
+    }
+
+    public void goToInventoryPage() {
+        Intent intent = new Intent(this, ViewInventory.class);
+        intent.putExtras(this.extras);
+        startActivity(intent);
     }
 
     /**
