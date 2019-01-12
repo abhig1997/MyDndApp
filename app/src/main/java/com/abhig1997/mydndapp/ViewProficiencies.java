@@ -178,6 +178,14 @@ public class ViewProficiencies extends AppCompatActivity {
                 obj.put("inventory", extras.getString("INVENTORY"));
             }
 
+            if (extras.getString("WEAPONS") == null || extras.getString("WEAPONS").length() == 0) {
+                obj.put("weapons", "No weapons");
+                extras.putString("WEAPONS", "No weapons");
+            }
+            else {
+                obj.put("weapons", extras.getString("WEAPONS"));
+            }
+
 
             toWrite = obj.toString(4);
             System.out.println(toWrite);
