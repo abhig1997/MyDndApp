@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -35,6 +37,9 @@ public class ViewWeapons extends AppCompatActivity {
 
         // display current weapons
         displayWeapons();
+
+        // add TextWatcher to weapons list
+        saveWeaponsChanges();
     }
 
     /**
@@ -104,6 +109,46 @@ public class ViewWeapons extends AppCompatActivity {
         else {
             weaponsDisplay.setText(weaponsContent);
         }
+    }
+
+    public void saveWeaponsChanges() {
+        final EditText weaponsDisplay = (EditText) findViewById(R.id.weaponsDisplay);
+        weaponsDisplay.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                try {
+//                    int newVal = Integer.parseInt(weaponsDisplay.getText().toString()); // the new hp
+                    // of the char
+                    String newVal = weaponsDisplay.getText().toString();
+
+                    // need to save that new HP into the file
+
+                    Bundle currExtras = getIntent().getExtras();
+
+                    // add the newHP to the bundle
+                    currExtras.putString("WEAPONS", newVal);
+
+                    extras = currExtras; // update the extras bundle
+
+                    // now save the bundle to the file
+                    saveAllExtras();
+                }
+                catch (NumberFormatException nfe) {
+                    nfe.printStackTrace();
+                }
+
+            }
+        });
     }
 
 
