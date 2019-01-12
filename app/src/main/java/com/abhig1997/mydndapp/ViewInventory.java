@@ -220,6 +220,14 @@ public class ViewInventory extends AppCompatActivity {
                 obj.put("weapons", extras.getString("WEAPONS"));
             }
 
+            if (extras.getString("SPELLS") == null || extras.getString("SPELLS").length() == 0) {
+                obj.put("spells", "No spells");
+                extras.putString("SPELLS", "No spells");
+            }
+            else {
+                obj.put("spells", extras.getString("SPELLS"));
+            }
+
 
             toWrite = obj.toString(4);
             System.out.println(toWrite);
