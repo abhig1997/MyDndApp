@@ -37,6 +37,9 @@ public class ViewSpells extends AppCompatActivity {
 
         // display spells
         displaySpells();
+
+        // save spells
+        saveSpellsChanges();
     }
 
     /**
