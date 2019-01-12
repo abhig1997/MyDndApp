@@ -825,8 +825,9 @@ public class CharacterView extends AppCompatActivity {
             obj.put("copper", extras.getInt("COPPER"));
             obj.put("initiative", extras.getInt("INITIATIVE"));
             obj.put("speed", extras.getInt("SPEED"));
-            if (extras.getString("INVENTORY").length() == 0) {
-
+            if (extras.getString("INVENTORY") == null || extras.getString("INVENTORY").length() == 0) {
+                obj.put("inventory", "No items!!");
+                extras.putString("INVENTORY", "No items!!");
             }
             else {
                 obj.put("inventory", extras.getString("INVENTORY"));

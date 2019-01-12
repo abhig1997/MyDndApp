@@ -188,7 +188,7 @@ public class ViewInventory extends AppCompatActivity {
             obj.put("initiative", extras.getInt("INITIATIVE"));
             obj.put("speed", extras.getInt("SPEED"));
             if (extras.getString("INVENTORY").length() == 0) {
-
+                obj.put("inventory", "No items!!");
             }
             else {
                 obj.put("inventory", extras.getString("INVENTORY"));
