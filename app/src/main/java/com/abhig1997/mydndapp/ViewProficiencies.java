@@ -67,7 +67,7 @@ public class ViewProficiencies extends AppCompatActivity {
                 goToCharacterView();
                 return true;
             case R.id.inventory:
-
+                goToInventoryView();
                 return true;
 
             default:
@@ -82,6 +82,16 @@ public class ViewProficiencies extends AppCompatActivity {
      */
     public void goToCharacterView() {
         Intent intent = new Intent(this, CharacterView.class);
+//        this.getExtras();
+        intent.putExtras(this.extras);
+        startActivity(intent);
+    }
+
+    /**
+     * Navigates to the Character View page
+     */
+    public void goToInventoryView() {
+        Intent intent = new Intent(this, ViewInventory.class);
 //        this.getExtras();
         intent.putExtras(this.extras);
         startActivity(intent);
@@ -152,6 +162,12 @@ public class ViewProficiencies extends AppCompatActivity {
             obj.put("copper", extras.getInt("COPPER"));
             obj.put("initiative", extras.getInt("INITIATIVE"));
             obj.put("speed", extras.getInt("SPEED"));
+            if (extras.getString("INVENTORY").length() == 0) {
+
+            }
+            else {
+                obj.put("inventory", extras.getString("INVENTORY"));
+            }
 
 
             toWrite = obj.toString(4);
@@ -173,6 +189,10 @@ public class ViewProficiencies extends AppCompatActivity {
             return false;
         }
         catch (org.json.JSONException jse) {
+            return false;
+        }
+        catch (NullPointerException npe) {
+            npe.printStackTrace();
             return false;
         }
 
