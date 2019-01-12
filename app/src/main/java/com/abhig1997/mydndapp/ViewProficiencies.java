@@ -70,6 +70,10 @@ public class ViewProficiencies extends AppCompatActivity {
                 goToInventoryView();
                 return true;
 
+            case R.id.weapons:
+                goToWeaponsView();
+                return true;
+
             default:
                 // If we got here, the user's action was not recognized.
                 // Invoke the superclass to handle it.
@@ -77,12 +81,17 @@ public class ViewProficiencies extends AppCompatActivity {
         }
     }
 
+    private void goToWeaponsView() {
+        Intent intent = new Intent(this, ViewWeapons.class);
+        intent.putExtras(this.extras);
+        startActivity(intent);
+    }
+
     /**
      * Navigates to the Character View page
      */
     public void goToCharacterView() {
         Intent intent = new Intent(this, CharacterView.class);
-//        this.getExtras();
         intent.putExtras(this.extras);
         startActivity(intent);
     }
@@ -167,6 +176,14 @@ public class ViewProficiencies extends AppCompatActivity {
             }
             else {
                 obj.put("inventory", extras.getString("INVENTORY"));
+            }
+
+            if (extras.getString("WEAPONS") == null || extras.getString("WEAPONS").length() == 0) {
+                obj.put("weapons", "No weapons");
+                extras.putString("WEAPONS", "No weapons");
+            }
+            else {
+                obj.put("weapons", extras.getString("WEAPONS"));
             }
 
 
