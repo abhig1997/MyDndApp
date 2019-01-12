@@ -16,7 +16,7 @@
             <item android:id="@+id/weapons"
                 android:title="Weapons"></item>
             <item android:id="@+id/spells"
-                android:title="spells"></item>
+                android:title="Spells"></item>
         </menu>
     </item>
 
