@@ -36,6 +36,7 @@ public class ViewInventory extends AppCompatActivity {
 
         // display money
         displayMoney();
+        displayInventory();
 
         // create TextWatchers
         saveAllChanges();
@@ -113,6 +114,19 @@ public class ViewInventory extends AppCompatActivity {
     }
 
 
+    public void displayInventory() {
+        EditText inventory = (EditText) findViewById(R.id.inventoryDisplay);
+        String content = extras.getString("INVENTORY");
+        if (content != null) {
+            inventory.setText(content);
+        }
+        else {
+
+        }
+
+    }
+
+
     /**
      * Saves all the character stats into a JSONObject and stores the file in internal storage
      * @return false if the saving is unsuccessful
@@ -173,6 +187,12 @@ public class ViewInventory extends AppCompatActivity {
             obj.put("copper", extras.getInt("COPPER"));
             obj.put("initiative", extras.getInt("INITIATIVE"));
             obj.put("speed", extras.getInt("SPEED"));
+            if (extras.getString("INVENTORY").length() == 0) {
+
+            }
+            else {
+                obj.put("inventory", extras.getString("INVENTORY"));
+            }
 
 
             toWrite = obj.toString(4);
@@ -196,6 +216,10 @@ public class ViewInventory extends AppCompatActivity {
         catch (org.json.JSONException jse) {
             return false;
         }
+        catch (NullPointerException npe) {
+            npe.printStackTrace();
+            return false;
+        }
 
     }
 
@@ -205,6 +229,7 @@ public class ViewInventory extends AppCompatActivity {
         saveGold();
         saveSilver();
         saveBronze();
+        saveInventory();
     }
 
     public void saveGold() {
@@ -310,6 +335,47 @@ public class ViewInventory extends AppCompatActivity {
 
                     // add the newHP to the bundle
                     currExtras.putInt("BRONZE", newVal);
+
+                    extras = currExtras; // update the extras bundle
+
+                    // now save the bundle to the file
+                    saveAllExtras();
+                }
+                catch (NumberFormatException nfe) {
+                    nfe.printStackTrace();
+                }
+
+            }
+        });
+    }
+
+    public void saveInventory() {
+        final EditText inventoryDisplay = (EditText) findViewById(R.id.inventoryDisplay);
+        inventoryDisplay.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                try {
+//                    int newVal = Integer.parseInt(inventoryDisplay.getText().toString()); // the new hp
+                    // of the char
+
+                    String inventoryContent = inventoryDisplay.getText().toString();
+
+                    // need to save that new HP into the file
+
+                    Bundle currExtras = getIntent().getExtras();
+
+                    // add the newHP to the bundle
+                    currExtras.putString("INVENTORY", inventoryContent);
 
                     extras = currExtras; // update the extras bundle
 

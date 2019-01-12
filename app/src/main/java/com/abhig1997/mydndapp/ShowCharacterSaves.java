@@ -76,7 +76,10 @@ public class ShowCharacterSaves extends AppCompatActivity {
 
             is.close();
 
+//            System.out.println(json);
+
             json = new String(buffer, "UTF-8");
+            System.out.println(json);
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -93,6 +96,7 @@ public class ShowCharacterSaves extends AppCompatActivity {
 
 
         try {
+//            System.out.println(json.toString());
             JSONObject obj = new JSONObject(json);
 
             System.out.println(obj.toString(4));

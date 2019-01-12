@@ -825,6 +825,12 @@ public class CharacterView extends AppCompatActivity {
             obj.put("copper", extras.getInt("COPPER"));
             obj.put("initiative", extras.getInt("INITIATIVE"));
             obj.put("speed", extras.getInt("SPEED"));
+            if (extras.getString("INVENTORY").length() == 0) {
+
+            }
+            else {
+                obj.put("inventory", extras.getString("INVENTORY"));
+            }
 
 
             toWrite = obj.toString(4);
@@ -846,6 +852,10 @@ public class CharacterView extends AppCompatActivity {
             return false;
         }
         catch (org.json.JSONException jse) {
+            return false;
+        }
+        catch (NullPointerException npe) {
+            npe.printStackTrace();
             return false;
         }
 
