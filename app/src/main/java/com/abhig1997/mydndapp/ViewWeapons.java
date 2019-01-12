@@ -75,11 +75,21 @@ public class ViewWeapons extends AppCompatActivity {
                 goToProficienciesView();
                 return true;
 
+            case R.id.spells:
+                goToSpellsView();
+                return true;
+
             default:
                 // If we got here, the user's action was not recognized.
                 // Invoke the superclass to handle it.
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    private void goToSpellsView() {
+        Intent intent = new Intent(this, ViewSpells.class);
+        intent.putExtras(this.extras);
+        startActivity(intent);
     }
 
     private void goToProficienciesView() {
